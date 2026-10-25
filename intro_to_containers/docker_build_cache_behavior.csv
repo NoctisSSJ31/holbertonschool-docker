@@ -1,0 +1,5 @@
+Step,Instruction,Cache Status,Reason
+1,FROM alpine,Using cache,Base image layer unchanged
+2,COPY message.txt /message.txt,Rebuilt,File context modified between v1 and v2
+3,RUN apk add --no-cache curl,Using cache,Instruction string and context unchanged
+4,CMD ["cat", "/message.txt"],Using cache,Instruction unchanged
